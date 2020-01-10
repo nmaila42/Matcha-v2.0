@@ -1,8 +1,12 @@
-<html>
-    <head>
-        <title>{{ title }} - Microblog</title>
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="login" method="post">
+    <label for="username">username</label>
+    <input type="text" name="username" id="username">
+    <label for="passwd">password</label>
+    <input type="password" name="passwd" id="passwd">
+    <input type="submit" value="OK">
+</form>
+{% endblock %}
