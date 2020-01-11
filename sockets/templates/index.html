@@ -9,10 +9,10 @@
 		<div id="chat-window">
 			<div id='online-users'><h3>Online Users</h3></div>
 			<div id="messages"></div>
-			<div id="new-message">
+			<form id="new-message">
 				<input type="text" name="message-box" id="message-box">
-				<button id="send">send</button>
-			</div>
+				<button type="submit" id="send">send</button>
+			</form>
 		</div>
 		<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" charset="utf-8">
 		</script>
