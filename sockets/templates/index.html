@@ -2,17 +2,19 @@
 <!DOCTYPE html>
 <html>
 	<head><title>socket</title>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+		<script src="{{ url_for('static', filename='js/socket.io.js') }}"></script>
+		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script> -->
 		
 	</head>
 	<body>
 		<div id="chat-window">
 			<div id='online-users'><h3>Online Users</h3></div>
 			<div id="messages"></div>
-			<form id="new-message">
+			<div id="new-message">
 				<input type="text" name="message-box" id="message-box">
+				<input type="text" name="to" id="to">
 				<button type="submit" id="send">send</button>
-			</form>
+			</div>
 		</div>
 		<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" charset="utf-8">
 		</script>

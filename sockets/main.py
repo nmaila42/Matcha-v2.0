@@ -25,8 +25,10 @@ def handle_message(message):
 
 @socketio.on('new-message')
 def handle_new_message(message):
-    print('received message: ' + str(message))
-    socketio.emit('message-recieved', message)
+    print('message-recieved-'+message['to'])
+    # event = 'message-recieved'
+    event = 'message-recieved'
+    socketio.emit(event, message)
 
 
 
