@@ -1,0 +1,34 @@
+body{
+    font: 14px sans-serif;
+    text-align: center;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.cupid_logo{
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+.many_hearts{
+    float: right;
+    width: 150px;
+    height: 150px;
+}
+
+.header{
+    background-color: white;
+    color: black;
+    width: 1200px;
+    height: 200px;
+    text-align: center;
+}
+
+.footer{
+    background-color: white;
+    color: black;
+    width: 1200px;
+    height: 40px;
+}
