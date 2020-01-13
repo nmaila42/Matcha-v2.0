@@ -52,3 +52,8 @@ def register():
 
 	else:
 		return render_template('register.html', title = 'Register')
+
+
+@app.route('/chat')
+def chat():
+    return render_template("chat.html")

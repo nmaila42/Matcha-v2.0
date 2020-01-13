@@ -1,18 +1,13 @@
-from flask import Flask, render_template
+from app import app
 from flask_socketio import SocketIO
 import os
 import random
 import string
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
 online_users = []
 
-@app.route('/')
-def index():
-    return render_template("index.html")
 
 @socketio.on('json')
 def handle_json(json):
