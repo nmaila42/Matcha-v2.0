@@ -2,21 +2,33 @@
 <!DOCTYPE html>
 <html>
 	<head><title>socket</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
 		<script src="{{ url_for('static', filename='js/socket.io.js') }}"></script>
 		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script> -->
-		
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 	</head>
 	<body>
-		<div id="chat-window">
-			<div id='online-users'><h3>Online Users</h3></div>
-			<div id="messages"></div>
-			<div id="new-message">
-				<input type="text" name="message-box" id="message-box">
-				<input type="text" name="to" id="to">
-				<button type="submit" id="send">send</button>
+		<div class="container">
+			<div class="row" id="chat-window">
+				<div class="col-2" id='online-users'>
+					<h4>Online Users</h4>
+				</div>
+				<div class="col-10">
+					<div class="row" id="messages"></div>
+					<div class="row" id="new-message">
+						<input type="text" name="message-box" id="message-box">
+						<button type="submit" id="send">send</button>
+					</div>
+				</div>
 			</div>
 		</div>
+
+
 		<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" charset="utf-8">
 		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 </html>
