@@ -23,10 +23,10 @@ def login():
 
 		if user['username'] == username and user['password'] == password:
 			return render_template('welcome.html', title = 'logger', user = user)
-		return render_template('index.html', title = 'Welcome', user = user)
+		return render_template('login.html', title = 'Welcome', user = user)
 
 	else:
-		return render_template('index.html', title = 'Welcome', user = user)
+		return render_template('login.html', title = 'Welcome', user = user)
 
 
 @app.route('/register', methods=['GET', 'POST'])
