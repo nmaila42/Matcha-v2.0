@@ -1,0 +1,4 @@
+./.vscode
+venv/
+__pycache__/test_pymongo.cpython-37-pytest-5.3.2.pyc
+.vscode/settings.json
